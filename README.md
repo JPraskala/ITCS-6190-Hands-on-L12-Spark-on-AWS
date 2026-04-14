@@ -94,7 +94,8 @@ Your Glue job needs permission to read from and write to S3.
 
 
 ##### Query 2
-<img width="1918" height="876" alt="query_two" src="https://github.com/user-attachments/assets/9e630e6a-3692-4ba9-b0fc-b73ee3c2591f" />
+<img width="1918" height="882" alt="query_two" src="https://github.com/user-attachments/assets/3877f021-a83c-4361-897c-400869cff03e" />
+
 
 
 ##### Query 3
