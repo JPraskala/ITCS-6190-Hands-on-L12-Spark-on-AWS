@@ -166,6 +166,9 @@ Your pipeline is now fully deployed and automated!
 
 ---
 
+<img width="1918" height="886" alt="monitor" src="https://github.com/user-attachments/assets/d2f996e9-0b24-4d4d-a0ab-e517d0a84a78" />
+
+
 ## 📈 Query Results
 
 After the job (which may take 2-3 minutes to run), navigate to your `handsonfinalprocessed` bucket. You will find the results in the `Athena Results/` folder, organized into sub-folders for each query:
