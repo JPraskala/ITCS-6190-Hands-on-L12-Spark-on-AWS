@@ -52,6 +52,9 @@ Create two S3 buckets with globally unique names:
 * `handsonfinallanding`: This is where you will upload your raw data.
 * `handsonfinalprocessed`: This is where the processed data and query results will be stored.
 
+  <img width="1912" height="870" alt="buckets" src="https://github.com/user-attachments/assets/473ebbd1-dcb8-4105-9119-cbea63d2d00c" />
+
+
 ### 3. Create IAM Role for AWS Glue
 Your Glue job needs permission to read from and write to S3.
 
@@ -61,6 +64,9 @@ Your Glue job needs permission to read from and write to S3.
 4.  Attach the `AWSGlueServiceRole` managed policy.
 5.  Attach the `AmazonS3FullAccess` policy (for this demo) or a more restrictive policy that only grants access to your two buckets.
 6.  Name the role `AWSGlueServiceRole-Reviews` and create it.
+
+<img width="1918" height="908" alt="role" src="https://github.com/user-attachments/assets/4b81a6cf-a7c4-4515-a0bd-095b38aa4d20" />
+
 
 ### 4. Create the AWS Glue ETL Job
 1.  Go to the **AWS Glue** service.
@@ -74,6 +80,21 @@ Your Glue job needs permission to read from and write to S3.
 
 > **Note:** The script is already configured to use the `handsonfinallanding` and `handsonfinalprocessed` buckets.
 
+<img width="1918" height="878" alt="job" src="https://github.com/user-attachments/assets/b9137433-7c78-4777-96e0-abd0bece5fbe" />
+
+#### Queries 
+
+##### Query 1
+<img width="1918" height="882" alt="query_one" src="https://github.com/user-attachments/assets/2c35b838-e0f1-4e85-8e39-808325c341df" />
+
+
+##### Query 2
+<img width="1918" height="870" alt="query_two" src="https://github.com/user-attachments/assets/9e4b840a-e3e3-4cea-bef2-a284d5a75bef" />
+
+##### Query 3
+<img width="1916" height="872" alt="query_three" src="https://github.com/user-attachments/assets/20572091-ac3a-41a4-85ce-394e004209cd" />
+
+
 ### 5. Create the Lambda Trigger Function
 This function will start the Glue job when a file is uploaded.
 
@@ -84,8 +105,13 @@ This function will start the Glue job when a file is uploaded.
 5.  **Permissions:** Under "Change default execution role," select **Create a new role with basic Lambda permissions**. This role will be automatically named.
 6.  Create the function.
 
+<img width="1918" height="882" alt="lambda_function" src="https://github.com/user-attachments/assets/9a71522d-a7fa-449a-b45e-1dbd81b4f6bc" />
+
+
 #### 5a. Add Lambda Code
 Paste the contents of `src/lambda_function.py` into the code editor. Make sure the `GLUE_JOB_NAME` variable matches the name of your Glue job (`process_reviews_job`).
+<img width="1918" height="876" alt="lambda_code" src="https://github.com/user-attachments/assets/48eeb054-e9a4-4a4d-af31-3d0b1974adef" />
+
 
 #### 5b. Add Lambda Permissions
 The new Lambda role needs permission to start a Glue job.
