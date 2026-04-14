@@ -1,6 +1,10 @@
 # Hands-on-12-Spark-on-AWS
 # Serverless Spark ETL Pipeline on AWS
 
+Name: Jacob Praskala
+
+Student ID Number: 800989838
+
 This project is a hands-on assignment demonstrating a fully automated, event-driven serverless data pipeline on AWS.
 
 The pipeline automatically ingests raw CSV product review data, processes it using a Spark ETL job, runs analytical SQL queries on the data, and saves the aggregated results back to S3.
@@ -85,14 +89,17 @@ Your Glue job needs permission to read from and write to S3.
 #### Queries 
 
 ##### Query 1
-<img width="1918" height="882" alt="query_one" src="https://github.com/user-attachments/assets/2c35b838-e0f1-4e85-8e39-808325c341df" />
+<img width="1918" height="907" alt="query_one" src="https://github.com/user-attachments/assets/8645779c-5262-4468-9049-be23881369d2" />
+
 
 
 ##### Query 2
-<img width="1918" height="870" alt="query_two" src="https://github.com/user-attachments/assets/9e4b840a-e3e3-4cea-bef2-a284d5a75bef" />
+<img width="1918" height="876" alt="query_two" src="https://github.com/user-attachments/assets/9e630e6a-3692-4ba9-b0fc-b73ee3c2591f" />
+
 
 ##### Query 3
-<img width="1916" height="872" alt="query_three" src="https://github.com/user-attachments/assets/20572091-ac3a-41a4-85ce-394e004209cd" />
+<img width="1918" height="863" alt="query_three" src="https://github.com/user-attachments/assets/b2725124-84e8-4abd-9f6e-24dec8d9721a" />
+
 
 
 ### 5. Create the Lambda Trigger Function
@@ -132,6 +139,9 @@ The new Lambda role needs permission to start a Glue job.
     ```
 4.  Name the policy `Allow-Glue-StartJobRun` and save it.
 
+<img width="1918" height="872" alt="inline_policy" src="https://github.com/user-attachments/assets/ef79fb1c-a230-498b-b9f9-c4bb505f8092" />
+
+
 #### 5c. Add the S3 Trigger
 1.  Go back to your Lambda function's main page.
 2.  Click **Add trigger**.
@@ -141,6 +151,8 @@ The new Lambda role needs permission to start a Glue job.
 6.  Acknowledge the recursive invocation warning and click **Add**.
 
 ---
+<img width="1918" height="882" alt="trigger" src="https://github.com/user-attachments/assets/870b6181-29be-4c28-99d4-ca68c9f4b706" />
+
 
 ## 🚀 How to Run the Pipeline
 
